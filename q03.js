@@ -1,17 +1,16 @@
 import { question } from "readline-sync";
+import { print } from "../../utils/input.js";
+
 function main(){
-    const A0 = Number(question("Enter the initial value of the arithmetic progression: "))
-    const limit = Number(question("Enter a limit for the arithmetic progression: ")) 
-    const R = Number(question("Enter the value of the commom_difference of the arithmetic progression: "))
-    let i = 0
-    
-    
+    const A0 = Number(question("Enter a initial number: "))
+    const limit = Number(question("Enter the limit of the Arithmetic Progression: "))
+    const common_difference = Number(question("Enter the value of the common_difference of the A.P: "))
+    let An = A0 
 
-    while(A0 + R*i < limit){
-        let value = A0 + R*i 
-        console.log(`${value}`)
-        i++
+    while(An < limit){
+        print(`${An}`)
+        An = An + common_difference
     }
-
 }
+
 main()

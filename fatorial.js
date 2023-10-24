@@ -1,4 +1,6 @@
 import {question} from "readline-sync";
+import 
+
 
 function main(){
     let num = Number(question("Enter a number: "))
